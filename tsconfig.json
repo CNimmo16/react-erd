@@ -7,8 +7,8 @@
     "target": "ES6",
     "jsx": "react-jsx",
     "composite": false,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+    "declarationMap": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
@@ -17,6 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveWatchOutput": true,
-    "strict": true
+    "strict": true,
+    "noEmit": true
   }
 }

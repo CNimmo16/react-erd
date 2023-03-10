@@ -24,10 +24,13 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Check code-style
-        run: yarn style
+        run: yarn check:style
 
       - name: Check linting
-        run: yarn lint
+        run: yarn check:lint
+
+      - name: Check types
+        run: yarn check:types
 
       - name: Create dist package
         run: yarn build
