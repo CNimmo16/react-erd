@@ -9,6 +9,10 @@
     "Database",
     "Database Diagram"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CNimmo16/react-erd.git"
+  },
   "license": "MIT",
   "exports": {
     ".": "./dist/RelationshipDiagram.js",
