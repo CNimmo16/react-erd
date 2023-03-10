@@ -30,7 +30,8 @@
     "build:esm": "rimraf ./dist && babel --extensions .ts,.tsx ./src --out-dir dist",
     "build:types": "rimraf ./types && tsc --project ./tsconfig.types.json",
     "build:styles": "rimraf ./dist/style.css && sass --load-path=node_modules/reactflow src/RelationshipDiagram.scss dist/style.css",
-    "watch:styles": "yarn build:styles --watch"
+    "watch:styles": "yarn build:styles --watch",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -68,7 +69,8 @@
     "rimraf": "^4.4.0",
     "storybook": "^6.5.16",
     "style-loader": "^3.3.1",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.21.0",
