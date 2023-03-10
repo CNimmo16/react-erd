@@ -1,6 +1,6 @@
 {
   "name": "react-erd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "types": "types/RelationshipDiagram.d.ts",
   "author": "CNimmo16",
   "exports": {
