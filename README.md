@@ -1,4 +1,3 @@
-
 # React ERD
 
 An easy-to-use component for rendering Entity Relationship Diagrams in React
@@ -19,7 +18,7 @@ yarn add react-erd
 
 ## Compatibility
 
-`react-erd` is compatible with React v16.8+ and supports ES modules only. 
+`react-erd` is compatible with React v16.8+ and supports ES modules only.
 
 ## Usage
 

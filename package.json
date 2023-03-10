@@ -7,11 +7,12 @@
     ".": "./dist/RelationshipDiagram.js",
     "./style.css": "./dist/style.css"
   },
-  
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*",
-    "format": "prettier --write .",
+    "lint": "eslint ./src/**/*.ts*",
+    "lint:fix": "eslint ./src/**/*.ts* --fix",
+    "style": "prettier --check .",
+    "style:fix": "prettier --write .",
     "storybook": "concurrently 'npm:watch:styles' 'start-storybook -p 6006'",
     "build-storybook": "build-storybook",
     "build": "rimraf ./dist && concurrently 'npm:build:*'",
@@ -56,7 +57,6 @@
     "rimraf": "^4.4.0",
     "storybook": "^6.5.16",
     "style-loader": "^3.3.1",
-    "tailwindcss": "^3.1.6",
     "typescript": "^4.9.5"
   },
   "dependencies": {

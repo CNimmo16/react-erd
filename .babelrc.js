@@ -16,8 +16,8 @@ module.exports = {
     [
       "@babel/react",
       {
-        runtime: 'automatic'
-      }
+        runtime: "automatic",
+      },
     ],
   ],
   plugins: [
