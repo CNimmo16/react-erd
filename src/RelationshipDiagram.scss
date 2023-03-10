@@ -1,0 +1,106 @@
+@use "dist/style.css";
+
+:root {
+  --react-erd__primary-color: 0, 14, 92;
+  --react-erd__secondary-color: 177, 177, 183;
+}
+.react-erd__container {
+  &,
+  * {
+    box-sizing: border-box;
+  }
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  .react-flow__node {
+    background-color: #fff;
+    text-align: left;
+    padding: 0;
+    border-top: none;
+    box-shadow: none !important;
+    cursor: move;
+    &:hover {
+      .react-flow__handle {
+        opacity: 1;
+      }
+    }
+  }
+  .react-flow__handle {
+    opacity: 0;
+    transition: opacity 0.15s;
+    width: 0;
+    background-color: transparent;
+    border: none;
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 1px;
+      top: 0;
+      bottom: 0;
+      width: 246px;
+    }
+    &:hover::after {
+      background-color: rgba(var(--react-erd__primary-color), 0.2);
+    }
+    height: 18px;
+    border-radius: 3px;
+  }
+  .react-flow__handle-right {
+    &::after {
+      right: 1px;
+      left: auto;
+    }
+  }
+  .title,
+  li {
+    padding: 0 6px;
+    height: var(--row-height);
+    text-overflow: ellipsis;
+    border: 1px solid rgba(var(--react-erd__primary-color), 0.4);
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title,
+  li:not(:last-of-type) {
+    border-bottom: none;
+  }
+  .title {
+    box-sizing: content-box;
+    background-color: rgba(var(--react-erd__primary-color), 0.1);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    border-top: 1px solid rgba(var(--react-erd__primary-color), 0.4);
+    gap: 5px;
+    .column-name {
+      font-weight: 500;
+      font-size: 10px;
+      margin-right: auto;
+    }
+    .column-icon {
+      width: 12px;
+    }
+    .column-type {
+      color: rgba(var(--react-erd__primary-color), 0.7);
+      font-size: 8px;
+      display: flex;
+      align-items: center;
+    }
+    &:last-of-type {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}
