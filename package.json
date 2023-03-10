@@ -14,6 +14,10 @@
     "url": "https://github.com/CNimmo16/react-erd.git"
   },
   "license": "MIT",
+  "files": [
+    "dist",
+    "types"
+  ],
   "exports": {
     ".": "./dist/RelationshipDiagram.js",
     "./style.css": "./dist/style.css"
