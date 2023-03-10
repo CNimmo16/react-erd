@@ -18,7 +18,7 @@ yarn add react-erd
 
 ## Compatibility
 
-`react-erd` is compatible with React v16.8+ and supports ES modules only.
+React ERD is compatible with React v16.8+ and supports ES modules only.
 
 ## Usage
 
@@ -71,3 +71,19 @@ function MyComponent() {
   );
 }
 ```
+
+## Caveats
+
+Note that the diagrams produced by this library are not Entity Relationship Diagrams in the strictest sense. 
+
+Traditionally, associative/junction tables used in many-to-many relationships are not represented as their own entity in an ERD. Instead the entities on each side of the relationship are joined by a single line, annotated with the appropriate "crow foot" notation to represent the many-to-many relation type.
+
+React ERD was designed for use-cases where you want to provide users with a more 1:1 insight into the actual *tables* in their database, rather than the *entities* represented in your application.
+
+In future React ERD may support more traditional forms of ERDs (see [roadmap](#roadmap) below).
+
+## Roadmap
+- Provide a controls overlay for navigating the diagram as an alternative to mouse/touch gestures.
+- Improve control over diagram styles - potentially move towards a "headless" model.
+- Support rendering many-to-many relationships in the traditional way using crow-foot notation and hidden junction table (see [caveats](#caveats)).
+- Allow configuration of table positions on screen.
