@@ -27,7 +27,7 @@
     "check:style": "prettier --check .",
     "check:style:fix": "prettier --write .",
     "build": "rimraf ./dist && concurrently 'npm:build:*'",
-    "build:ts": "tsup ./src/**/*.{ts,tsx} --dts --sourcemap --format esm,cjs",
+    "build:ts": "tsup ./src/RelationshipDiagram.tsx --dts --sourcemap --format esm,cjs",
     "build:styles": "sass --load-path=node_modules/reactflow src/RelationshipDiagram.scss dist/style.css",
     "watch:styles": "npm run build:styles --watch",
     "prepare": "husky install",
