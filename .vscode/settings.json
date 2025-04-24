@@ -1,6 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": false
+    "source.fixAll": "never"
   },
   "[typescriptreact][typescript]": {
     "editor.formatOnSave": true,

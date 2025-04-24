@@ -1,6 +1,6 @@
 {
   "name": "react-erd",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "CNimmo16",
   "keywords": [
     "Entity Relationship Diagram",
@@ -9,32 +9,28 @@
     "Database",
     "Database Diagram"
   ],
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/CNimmo16/react-erd.git"
   },
   "license": "MIT",
+  "main": "dist/RelationshipDiagram.cjs",
+  "module": "dist/RelationshipDiagram.js",
+  "types": "dist/RelationshipDiagram.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
-  "exports": {
-    ".": "./dist/RelationshipDiagram.js",
-    "./style.css": "./dist/style.css"
-  },
-  "types": "types/RelationshipDiagram.d.ts",
   "scripts": {
     "check:lint": "eslint ./src/**/*.ts*",
     "check:lint:fix": "eslint ./src/**/*.ts* --fix",
     "check:style": "prettier --check .",
     "check:style:fix": "prettier --write .",
-    "check:types": "tsc",
     "storybook": "concurrently 'npm:watch:styles' 'start-storybook -p 6006'",
     "build-storybook": "build-storybook",
     "build": "rimraf ./dist && concurrently 'npm:build:*'",
-    "build:esm": "rimraf ./dist && babel --extensions .ts,.tsx ./src --out-dir dist",
-    "build:types": "rimraf ./types && tsc --project ./tsconfig.types.json",
-    "build:styles": "rimraf ./dist/style.css && sass --load-path=node_modules/reactflow src/RelationshipDiagram.scss dist/style.css",
+    "build:ts": "tsup ./src/**/*.{ts,tsx} --dts --sourcemap --format esm,cjs",
+    "build:styles": "sass --load-path=node_modules/reactflow src/RelationshipDiagram.scss dist/style.css",
     "watch:styles": "yarn build:styles --watch",
     "prepare": "husky install"
   },
@@ -45,13 +41,13 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/addon-actions": "^8.6.12",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-links": "^8.6.12",
+    "@storybook/builder-webpack5": "^8.6.12",
     "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/react": "^6.5.16",
+    "@storybook/react": "^8.6.12",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
@@ -68,14 +64,15 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.11",
+    "husky": "^8.0.0",
     "prettier": "2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.4.0",
-    "storybook": "^6.5.16",
+    "storybook": "^8.6.12",
     "style-loader": "^3.3.1",
-    "typescript": "^4.9.5",
-    "husky": "^8.0.0"
+    "tsup": "^8.4.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "@babel/runtime": "^7.21.0",
@@ -85,7 +82,7 @@
     "sass": "^1.58.3"
   },
   "peerDependencies": {
-    "react": ">=16.8",
-    "react-dom": ">=16.8"
+    "react": ">=19",
+    "react-dom": ">=19"
   }
 }

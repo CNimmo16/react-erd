@@ -3,7 +3,7 @@ import { Meta } from "@storybook/react";
 import {
   RelationshipDiagram,
   RelationshipDiagramProps,
-} from "../src/RelationshipDiagram";
+} from "../src/RelationshipDiagram.js";
 import { schemeCategory10, schemeTableau10 } from "d3-scale-chromatic";
 import "../dist/style.css";
 

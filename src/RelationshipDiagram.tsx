@@ -15,15 +15,14 @@ import {
   EdgeProps,
   useReactFlow,
   ReactFlowProvider,
-} from "reactflow";
-import ReactFlow, {
+  ReactFlow,
   Handle,
   Position,
   ConnectionLineType,
   getSmoothStepPath,
 } from "reactflow";
 
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiKeyLink, mdiKey, mdiLinkVariant } from "@mdi/js";
 
 export type DataType =
