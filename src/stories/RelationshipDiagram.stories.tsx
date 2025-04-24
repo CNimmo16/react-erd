@@ -1,10 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { useState } from "react";
-import {
-  RelationshipDiagram,
-  RelationshipDiagramProps,
-} from "../RelationshipDiagram.js";
+import { RelationshipDiagram } from "../RelationshipDiagram.js";
 import { schemeCategory10, schemeTableau10 } from "d3-scale-chromatic";
 import "../../dist/style.css";
 
