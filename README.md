@@ -2,6 +2,8 @@
 
 An easy-to-use component for rendering Entity Relationship Diagrams in React
 
+![Example image](/example.png)
+
 ## Installation
 
 Install `react-erd` using npm:
