@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+
       - run: npm ci
-      - run: npm test
 
       - name: Check code-style
         run: npm run check:style

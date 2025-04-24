@@ -18,13 +18,13 @@ yarn add react-erd
 
 ## Compatibility
 
-React ERD is compatible with React v16.8+ and supports ES modules only.
+React ERD is compatible with React v18+.
 
 ## Usage
 
 ```js
 import { RelationshipDiagram } from 'react-erd';
-import 'react-erd/style.css'
+import 'react-erd/dist/style.css'
 
 function MyComponent() {
   return (
