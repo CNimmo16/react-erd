@@ -7,12 +7,13 @@
     "React",
     "ERD",
     "Database",
-    "Database Diagram"
+    "Database Diagram",
+    "ER Diagram"
   ],
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CNimmo16/react-erd.git"
+    "url": "git+https://github.com/CNimmo16/react-erd.git"
   },
   "license": "MIT",
   "main": "dist/RelationshipDiagram.cjs",
