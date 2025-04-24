@@ -14,26 +14,21 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+          node-version: 20
+          cache: "npm"
+      - run: npm ci
+      - run: npm test
 
       - name: Check code-style
-        run: yarn check:style
+        run: npm run check:style
 
       - name: Check linting
-        run: yarn check:lint
-
-      - name: Check types
-        run: yarn check:types
+        run: npm run check:lint
 
       - name: Create dist package
-        run: yarn build
+        run: npm run build
 
       - name: Automated Version Bump
         uses: phips28/gh-action-bump-version@master
