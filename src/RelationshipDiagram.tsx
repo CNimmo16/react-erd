@@ -46,6 +46,7 @@ type ForeignKey = {
 type DatabaseTableInfo = {
   name: string;
   primaryKey: string | string[];
+  color?: string;
   columns: {
     name: string;
     type: DataType;
@@ -296,6 +297,7 @@ function RelationshipDiagram({
       let prevTableMaxY = 0;
       for (const [index, table] of tables.entries()) {
         const id = getRef(table.schemaName, table.name);
+        const tableColor = table.color ? table.color : tableColors[nodes.length % tableColors.length];
         if (nodes.some((node) => node.data.id === id)) {
           continue;
         }
@@ -320,7 +322,7 @@ function RelationshipDiagram({
             id,
             table,
             foreignKeysReferencingTable,
-            color: tableColors[nodes.length % tableColors.length],
+            color: tableColor,
           },
           position: {
             x: xPosition,
