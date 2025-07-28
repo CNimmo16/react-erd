@@ -38,6 +38,7 @@ function MyComponent() {
             {
               name: "orders",
               primaryKey: "id",
+              color: "yellow",  // Optional. Use this specific color rather than those defined in tableColors
               columns: [
                 {
                   name: "id",

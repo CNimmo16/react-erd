@@ -297,7 +297,9 @@ function RelationshipDiagram({
       let prevTableMaxY = 0;
       for (const [index, table] of tables.entries()) {
         const id = getRef(table.schemaName, table.name);
-        const tableColor = table.color ? table.color : tableColors[nodes.length % tableColors.length];
+        const tableColor = table.color
+          ? table.color
+          : tableColors[nodes.length % tableColors.length];
         if (nodes.some((node) => node.data.id === id)) {
           continue;
         }
