@@ -28,10 +28,16 @@ import { mdiKeyLink, mdiKey, mdiLinkVariant } from "@mdi/js";
 export type DataType =
   | "binary"
   | "number"
+  | "number[]"
   | "boolean"
+  | "boolean[]"
   | "text"
+  | "text[]"
   | "datetime"
+  | "datetime[]"
+  | "uuid"
   | "hierarchical"
+  | "json"
   | "geometric"
   | "money"
   | "other";
